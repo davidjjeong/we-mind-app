@@ -12,7 +12,7 @@ export default function Home() {
       />
       <h1 className="mt-5">WeMind.</h1>
       <h2>
-        Your personalized assistant designed to care about your mind.
+        Your personalized assistant designed to take care of your mind.
       </h2>
     </div>
   );
