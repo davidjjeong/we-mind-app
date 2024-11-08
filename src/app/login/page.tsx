@@ -59,6 +59,8 @@ export default function Login() {
               placeholder="Password"
             />
             <Button
+              id="loginBtn"
+              type="submit"
               height="60px"
               width="150px"
               radius="20px"
@@ -69,6 +71,7 @@ export default function Login() {
             />
           </form>
         </section>
+        {error && <div>{error}</div>}
       </div>
     );
 }

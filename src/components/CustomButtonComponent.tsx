@@ -1,6 +1,6 @@
 import React from "react";
 
-interface Props {
+interface Props extends React.HTMLProps<HTMLButtonElement> {
     id?: string;
     borderWidth?: string;
     borderColor?: string;

@@ -19,7 +19,7 @@ export default function Home() {
       </h2>
       <Link className="mt-[60px]" href="/login">
         <Button
-          id={styles.loginBtn}
+          id="loginBtn"
           height="60px"
           width="150px"
           radius="20px"
