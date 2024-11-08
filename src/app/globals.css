@@ -22,3 +22,18 @@ h2 {
   font-size: 24px;
   font-weight: 400;
 }
+
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+button {
+  font-family: inherit;
+}
+
+input.userInfo {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #2E30FF;
+}
