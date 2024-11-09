@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./login.module.css";
-import Button from "@/components/CustomButtonComponent";
+import Button from "@/components/Buttons/CustomButtonComponent";
+import Popup from "@/components/Popup/PopupComponent";
 
 export default function Login() {
     const [error, setError] = useState("");
@@ -71,7 +72,11 @@ export default function Login() {
             />
           </form>
         </section>
-        {error && <div>{error}</div>}
+        <Popup
+          className={error ? `${styles.errorTrue} ${styles.errorFalse}` : `${styles.errorFalse}`}
+          popupType="error"
+          children={error}
+        />
       </div>
     );
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/CustomButtonComponent";
+import Button from "@/components/Buttons/CustomButtonComponent";
 import styles from "./index.module.css";
 
 export default function Home() {
