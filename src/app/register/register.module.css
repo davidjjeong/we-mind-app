@@ -1,0 +1,30 @@
+section.loginSection {
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorTrue {
+    animation: fade-in-up ease 0.4s forwards;
+}
+
+.errorFalse {
+    opacity: 0;
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
