@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.homeContainer}>
       <Image
-        src="/we-mind-logo.svg"
+        src="/wemind-new-logo.svg"
         height={300}
         width={300}
         alt="Logo"
@@ -15,7 +15,7 @@ export default function Home() {
       <h1 className="mt-5">WeMind.</h1>
       <h2>
         Your personalized assistant designed to take care of your&nbsp;
-        <span className="text-[#FF851B]">mind.</span>
+        <span className="text-[#FF9FAD]">mind.</span>
       </h2>
       <Link className="mt-[60px]" href="/login">
         <Button
@@ -23,7 +23,7 @@ export default function Home() {
           height="60px"
           width="150px"
           radius="20px"
-          bgColor="#2E30FF"
+          bgColor="#BF94E4"
           fontColor="#FFF"
           fontSize="24px"
           children="Sign in"
@@ -31,7 +31,7 @@ export default function Home() {
       </Link>
       <h3 className="mt-3">
         Don't have an account?&nbsp;
-        <Link className="text-[#2E30FF]" href="/register">Sign Up</Link>
+        <Link className="text-[#BF94E4]" href="/register">Sign Up</Link>
       </h3>
     </div>
   );

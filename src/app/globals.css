@@ -36,9 +36,9 @@ input {
 input.userInfo {
   outline: 0;
   border-width: 0 0 2px;
-  border-color: #2E30FF;
+  border-color: #BF94E4;
 }
 
 #loginBtn:hover {
-  filter: brightness(1.25);
+  filter: brightness(1.15);
 }

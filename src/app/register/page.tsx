@@ -32,7 +32,7 @@ export default function Register() {
     <div className="flex flex-col w-screen h-screen justify-center items-center">
         <section className={styles.loginSection}>
           <Image
-            src="/we-mind-logo.svg"
+            src="/wemind-new-logo.svg"
             height={150}
             width={150}
             alt="Logo"
@@ -40,7 +40,7 @@ export default function Register() {
           <h1 className="text-[56px]">Join WeMind.</h1>
           <h3 className="text-[18px]">
             Take a moment for yourself today.&nbsp;
-            <Link className="text-[#FF851B]" href="/login">
+            <Link className="text-[#FF9FAD]" href="/login">
               Already our member?
             </Link>
           </h3>
@@ -75,7 +75,7 @@ export default function Register() {
               height="60px"
               width="150px"
               radius="20px"
-              bgColor="#2E30FF"
+              bgColor="#BF94E4"
               fontColor="#FFF"
               fontSize="24px"
               children="Sign up"

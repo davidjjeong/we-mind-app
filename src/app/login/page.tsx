@@ -24,7 +24,7 @@ export default function Login() {
           setError(res.error as string);
         }
         if (res?.ok) {
-          return router.push("/");
+          return router.push("/dashboard");
         }
     };
 
@@ -32,7 +32,7 @@ export default function Login() {
       <div className="flex flex-col w-screen h-screen justify-center items-center">
         <section className={styles.loginSection}>
           <Image
-            src="/we-mind-logo.svg"
+            src="/wemind-new-logo.svg"
             height={150}
             width={150}
             alt="Logo"
@@ -40,7 +40,7 @@ export default function Login() {
           <h1 className="text-[56px]">Welcome Back</h1>
           <h3 className="text-[18px]">
             New to WeMind?&nbsp;
-            <Link className="text-[#FF851B]" href="/register">
+            <Link className="text-[#FF9FAD]" href="/register">
               Embark on Your Journey
             </Link>
           </h3>
@@ -65,7 +65,7 @@ export default function Login() {
               height="60px"
               width="150px"
               radius="20px"
-              bgColor="#2E30FF"
+              bgColor="#BF94E4"
               fontColor="#FFF"
               fontSize="24px"
               children="Log in"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Provider } from "./provider";
 import "./globals.css";
 
 const apercu = localFont({
@@ -40,11 +41,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${apercu.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <Provider>
+        <body
+          className={`${apercu.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </Provider>
     </html>
   );
 }
