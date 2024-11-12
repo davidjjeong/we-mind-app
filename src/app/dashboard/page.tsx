@@ -18,6 +18,13 @@ export default function Dashboard() {
                 <SideBar />
                 <div className={styles.dashboardMain}>
                     <h1 className="mt-4 ml-10 text-[56px]">Hello, {user_first_name}! 👋</h1>
+                    {messages.map((message) =>
+                    message.role === 'assistant' ? (
+                        <div />
+                    ) : (
+                        <div />
+                    )
+                    )}
                 </div>
             </div>
         );
