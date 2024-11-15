@@ -1,0 +1,7 @@
+.widgetContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 8px 8px 12px 0 #ffb5c0;
+}
