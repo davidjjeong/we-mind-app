@@ -20,8 +20,9 @@ export default function Dashboard() {
                 <SideBar />
                 <div className={styles.dashboardMain}>
                     <h1 className="text-[56px] mb-5">Hello, {user_first_name}! 👋</h1>
-                    <Widget height="350px" width="400px" textColor="#000"
-                    heading="Mood Score" headingSize="36px" children={<MoodChart />} />
+                    <Widget textColor="#000" bgColor="#FFF"
+                        heading="Weekly Mood" headingSize="36px" children={<MoodChart />} 
+                    />
                     {messages.map((message) =>
                     message.role === 'assistant' ? (
                         <div key={message.id}>

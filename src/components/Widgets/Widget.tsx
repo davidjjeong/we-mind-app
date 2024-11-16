@@ -2,10 +2,7 @@ import React from "react";
 import styles from "./widget.module.css";
 
 interface Props {
-    height?: string;
-    width?: string;
-    gradientOne?: string;
-    gradientTwo?: string;
+    bgColor?: string;
     textColor?: string;
     heading?: string;
     headingSize?: string;
@@ -14,10 +11,7 @@ interface Props {
 }
 
 const Widget: React.FC<Props> = ({
-    height,
-    width,
-    gradientOne,
-    gradientTwo,
+    bgColor,
     textColor,
     heading,
     headingSize,
@@ -26,9 +20,8 @@ const Widget: React.FC<Props> = ({
 }) => {
     return(
         <div className={styles.widgetContainer} style={{
-            height: height,
-            width: width,
             color: textColor,
+            backgroundColor: bgColor,
         }}
         >
             <h2 style={{

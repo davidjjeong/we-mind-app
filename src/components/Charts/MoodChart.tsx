@@ -1,16 +1,24 @@
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
+import { BarChart, Bar, Cell, CartesianGrid, XAxis, YAxis, Tooltip } from "recharts";
 
-const data = [{day: 'Mon', score: 90},{ day: 'Tues', score: 75},{day: 'Wed', score: 30},
-    {day: 'Thurs', score: 75}, {day: 'Fri', score: 87}, {day: 'Sat', score: 67}, {day: 'Sun', score: 76}
+const data = [{day: 'M', score: 90},{ day: 'T', score: 75},{day: 'W', score: 30},
+    {day: 'T', score: 75}, {day: 'F', score: 87}, {day: 'S', score: 67}, {day: 'S', score: 76}
 ]
+
+const colors = ['#BF94E4', '#C698E0', '#CD9BDC', '#D49FD8', '#DBA3D4',
+                '#E3A6D0', '#EAAACC', '#F1AEC8', '#F8B1C4', '#FFB5C0'];
 
 export const MoodChart = () => {
     return(
-        <LineChart height={300} width={400} data={data}>
-            <Line type="monotone" dataKey="score" stroke="#1afff" strokeWidth="5px" />
-            <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-            <XAxis dataKey="day" />
-            <YAxis />
-        </LineChart>
+        <BarChart height={300} width={400} data={data} margin={{ top: 0, left: 0, right: 0, bottom: 0 }}>
+            <CartesianGrid strokeDasharray="5 5" vertical={false} />
+            <XAxis dataKey="day" stroke="#000" axisLine={false} tickLine={false} />
+            <YAxis stroke="#000" axisLine={false} tickLine={false} />
+            <Tooltip />
+            <Bar type="monotone" dataKey="score" radius={[30,30,30,30]}>
+                {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={colors[~~(entry.score/10)]} />
+                ))}
+            </Bar>
+        </BarChart>
     );
 }

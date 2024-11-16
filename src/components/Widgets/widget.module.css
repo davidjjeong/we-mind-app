@@ -1,7 +1,10 @@
 .widgetContainer {
+    max-width: fit-content;
     display: flex;
     flex-direction: column;
+    row-gap: 10px;
     padding: 20px;
     border-radius: 50px;
-    box-shadow: 8px 8px 12px 0 #ffb5c0;
+    border-width: 3px;
+    border-color: #f0f0f0;
 }
