@@ -9,7 +9,7 @@ const colors = ['#BF94E4', '#C698E0', '#CD9BDC', '#D49FD8', '#DBA3D4',
 
 export const MoodChart = () => {
     return(
-        <BarChart height={300} width={400} data={data} margin={{ top: 0, left: 0, right: 0, bottom: 0 }}>
+        <BarChart height={300} width={450} data={data} margin={{ top: 0, left: 0, right: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="5 5" vertical={false} />
             <XAxis dataKey="day" stroke="#000" axisLine={false} tickLine={false} />
             <YAxis stroke="#000" axisLine={false} tickLine={false} />
