@@ -10,10 +10,33 @@
     background-color: #FFF;
 }
 
+.mainWidgets {
+    display: flex;
+    flex-direction: row;
+    gap: 0 20px;
+}
+
 .WeMiLogo {
     height: 100px;
     width: 100px;
     border-radius: 50%;
     filter: blur(16px);
     background-image: linear-gradient(to left bottom, #fdf064, #ffdd72, #ffcc86, #ffc09b, #ffb9ac, #ffb3b2, #feadbb, #f9a9c5, #f1a1cb, #e59bd3, #d497dc, #bf94e4);
+}
+
+@media only screen and (max-width: 1180px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .dashboardMain {
+        border-radius: 50px 50px 0 0;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .mainWidgets {
+        flex-direction: column;
+        gap: 20px 0;
+    }
 }

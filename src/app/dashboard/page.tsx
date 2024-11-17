@@ -21,7 +21,7 @@ export default function Dashboard() {
                 <SideBar />
                 <div className={styles.dashboardMain}>
                     <h1 className="text-[56px] mb-5">Hello, {user_first_name}! 👋</h1>
-                    <div className="flex flex-row gap-x-[20px]">
+                    <div className={styles.mainWidgets}>
                         <Widget textColor="#000" bgColor="#FFF"
                             heading="Weekly Mood" headingSize="36px" children={<MoodChart />} 
                         />

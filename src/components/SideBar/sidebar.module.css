@@ -20,3 +20,10 @@ li.navLink:hover {
     color: #BF94E4;
     background-color: #FFF;
 }
+
+@media only screen and (max-width: 1180px){
+    nav.sidebar {
+        height: 250px;
+        width: 100vw;
+    }
+}
