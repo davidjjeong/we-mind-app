@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./widget.module.css";
 
 interface Props {
+    className?: string;
     bgColor?: string;
     opacity?: string;
     textColor?: string;
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const Widget: React.FC<Props> = ({
+    className,
     bgColor,
     opacity,
     textColor,
@@ -21,7 +23,7 @@ const Widget: React.FC<Props> = ({
     children
 }) => {
     return(
-        <div className={styles.widgetContainer} style={{
+        <div className={`${className} ${styles.widgetContainer}`} style={{
             color: textColor,
             backgroundColor: bgColor,
             opacity: opacity,

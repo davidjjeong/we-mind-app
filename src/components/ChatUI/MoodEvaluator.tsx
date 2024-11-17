@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import { ArrowUpCircleIcon } from '@heroicons/react/24/solid';
 import Button from '../Buttons/CustomButtonComponent';
-import styles from "./moodevaluator.module.css";
 
 const MoodEvaluator = () => {
     const [prompt, setPrompt] = useState<string>('');
     const [generation, setGeneration] = useState<string>('');
 
     return(
-        <div className="flex flex-col items-center">
-            <h1 className={`text-[36px] ${styles.heading}`}>
+        <div className="flex flex-col items-center h-[100%]">
+            <h1 className="text-[36px]">
                 How do you feel today?
             </h1>
             {generation != "" && (
@@ -45,10 +44,11 @@ const MoodEvaluator = () => {
                     </div>
                 )
             )}
+            <div className="grow" />
             <div>
                 <input
                     className="bg-[#F7F7F7] h-[50px] w-[400px] rounded-full
-                    px-[12px] outline-0"
+                    pl-[12px] pr-[48px] outline-0"
                     placeholder="How do you feel today?"
                     value={prompt}
                     onChange={e => setPrompt(e.target.value)}
@@ -66,7 +66,8 @@ const MoodEvaluator = () => {
                             });
                         });
                     }}  
-                    children={<ArrowUpCircleIcon className="inline-flex size-10 ml-[-50px] fill-[#FF7488]" />} 
+                    children={<ArrowUpCircleIcon className="inline-flex size-10 ml-[-50px] fill-[#FF7488]
+                                                            hover:opacity-[0.8]" />} 
                 />
             </div>
         </div>
