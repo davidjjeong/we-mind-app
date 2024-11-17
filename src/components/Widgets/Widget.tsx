@@ -3,6 +3,7 @@ import styles from "./widget.module.css";
 
 interface Props {
     bgColor?: string;
+    opacity?: string;
     textColor?: string;
     heading?: string;
     headingSize?: string;
@@ -12,6 +13,7 @@ interface Props {
 
 const Widget: React.FC<Props> = ({
     bgColor,
+    opacity,
     textColor,
     heading,
     headingSize,
@@ -22,6 +24,7 @@ const Widget: React.FC<Props> = ({
         <div className={styles.widgetContainer} style={{
             color: textColor,
             backgroundColor: bgColor,
+            opacity: opacity,
         }}
         >
             <h2 style={{

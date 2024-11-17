@@ -11,7 +11,8 @@ export async function POST(req: Request){
         system: "You are WeMi, a helpful assistant that will analyze \
         the prompt, which represents the user's current mood, and \
         give a score on a scale of 0 to 100. 0 is a score of the worst \
-        mood, while 100 is a score of the best mood.",
+        mood, while 100 is a score of the best mood. You will give a \
+        concise response.",
         prompt
     });
 

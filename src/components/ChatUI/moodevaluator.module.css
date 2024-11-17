@@ -1,0 +1,8 @@
+.heading {
+    display: flex;
+}
+
+.heading::after {
+    content: "";
+    flex: 1;
+}
