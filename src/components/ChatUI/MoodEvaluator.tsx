@@ -47,7 +47,7 @@ const MoodEvaluator = () => {
             <div className="grow" />
             <div>
                 <input
-                    className="bg-[#F7F7F7] h-[50px] w-[400px] rounded-full
+                    className="bg-[#F7F7F7] h-[50px] w-[100%] max-w-[400px] rounded-full
                     pl-[12px] pr-[48px] outline-0"
                     placeholder="How do you feel today?"
                     value={prompt}

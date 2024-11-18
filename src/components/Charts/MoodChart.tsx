@@ -1,4 +1,4 @@
-import { BarChart, Bar, Cell, CartesianGrid, XAxis, YAxis, Tooltip } from "recharts";
+import { BarChart, Bar, Cell, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const data = [{day: 'M', score: 90},{ day: 'T', score: 75},{day: 'W', score: 30},
     {day: 'T', score: 75}, {day: 'F', score: 87}, {day: 'S', score: 67}, {day: 'S', score: 76}
@@ -9,7 +9,9 @@ const colors = ['#BF94E4', '#C698E0', '#CD9BDC', '#D49FD8', '#DBA3D4',
 
 export const MoodChart = () => {
     return(
-        <BarChart height={300} width={450} data={data} margin={{ top: 0, left: 0, right: 0, bottom: 0 }}>
+        <div className="max-w-[450px]">
+        <ResponsiveContainer height={300} width="100%">
+        <BarChart data={data} margin={{ top: 0, left: 0, right: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="5 5" vertical={false} />
             <XAxis dataKey="day" stroke="#000" axisLine={false} tickLine={false} />
             <YAxis stroke="#000" axisLine={false} tickLine={false} />
@@ -20,5 +22,7 @@ export const MoodChart = () => {
                 ))}
             </Bar>
         </BarChart>
+        </ResponsiveContainer>
+        </div>
     );
 }
