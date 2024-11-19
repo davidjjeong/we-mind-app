@@ -44,7 +44,13 @@ const MoodEvaluator = () => {
                     </div>
                 )
             )}
-            <div className="grow" />
+            <div className="grow text-center">
+                {generation == "" && 
+                <h3 className="text-[#BF94E4] my-[20px]">
+                    It's ok to be honest. We will do the rest for you.
+                </h3>
+                }
+            </div>
             <div>
                 <input
                     className="bg-[#F7F7F7] h-[50px] w-[100%] max-w-[400px] rounded-full
