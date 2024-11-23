@@ -22,10 +22,10 @@ export default function Dashboard() {
                 <div className={styles.dashboardMain}>
                     <h1 className="text-[56px] mb-5">Hello, {user_first_name}! 👋</h1>
                     <div className={styles.mainWidgets}>
-                        <Widget textColor="#000" bgColor="#FFF"
+                        <Widget textColor="#000" bgColor="#FFF" width={450}
                             heading="Weekly Mood" headingSize="36px" children={<MoodChart />} 
                         />
-                        <Widget textColor="#000" bgColor="#FFF"
+                        <Widget textColor="#000" bgColor="#FFF" width={450}
                             children={<MoodEvaluator />}
                         />
                     </div>

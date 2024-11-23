@@ -1,6 +1,5 @@
 .widgetContainer {
     display: flex;
-    width: min(450px, 100vw);
     flex-direction: column;
     row-gap: 10px;
     padding: 20px;
