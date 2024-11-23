@@ -44,16 +44,27 @@ const MoodEvaluator = () => {
                     </div>
                 )
             )}
-            <div className="grow text-center">
+            <div className="flex grow text-center items-center justify-center w-[100%]">
                 {generation == "" && 
-                <h3 className="text-[#BF94E4] my-[20px]">
-                    It's ok to be honest. We will do the rest for you.
-                </h3>
+                <div className="flex flex-row justify-evenly w-[100%] my-[20px]">
+                    <div className="opacity-50 hover:opacity-100">
+                        <h1>😍</h1>
+                        <h3>Happy</h3>
+                    </div>
+                    <div className="opacity-50 hover:opacity-100">
+                        <h1>😭</h1>
+                        <h3>Sad</h3>
+                    </div>
+                    <div className="opacity-50 hover:opacity-100">
+                        <h1>🤬</h1>
+                        <h3>Angry</h3>
+                    </div>
+                </div>
                 }
             </div>
-            <div>
+            <div className="w-[100%]">
                 <input
-                    className="bg-[#F7F7F7] h-[50px] w-[100%] max-w-[400px] rounded-full
+                    className="bg-[#F7F7F7] h-[50px] w-[100%] rounded-full
                     pl-[12px] pr-[48px] outline-0"
                     placeholder="How do you feel today?"
                     value={prompt}

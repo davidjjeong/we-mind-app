@@ -9,20 +9,18 @@ const colors = ['#BF94E4', '#C698E0', '#CD9BDC', '#D49FD8', '#DBA3D4',
 
 export const MoodChart = () => {
     return(
-        <div className="max-w-[450px]">
         <ResponsiveContainer height={300} width="100%">
-        <BarChart data={data} margin={{ top: 0, left: 0, right: 0, bottom: 0 }}>
-            <CartesianGrid strokeDasharray="5 5" vertical={false} />
-            <XAxis dataKey="day" stroke="#000" axisLine={false} tickLine={false} />
-            <YAxis stroke="#000" axisLine={false} tickLine={false} />
-            <Tooltip />
-            <Bar type="monotone" dataKey="score" radius={[30,30,30,30]}>
-                {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={colors[~~(entry.score/10)]} />
-                ))}
-            </Bar>
-        </BarChart>
+            <BarChart data={data} margin={{ top: 0, left: 0, right: 0, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="5 5" vertical={false} />
+                <XAxis dataKey="day" stroke="#000" axisLine={false} tickLine={false} />
+                <YAxis stroke="#000" axisLine={false} tickLine={false} />
+                <Tooltip />
+                <Bar type="monotone" dataKey="score" radius={[30,30,30,30]}>
+                    {data.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={colors[~~(entry.score/10)]} />
+                    ))}
+                </Bar>
+            </BarChart>
         </ResponsiveContainer>
-        </div>
     );
 }
