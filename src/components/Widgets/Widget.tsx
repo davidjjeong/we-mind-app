@@ -32,13 +32,13 @@ const Widget: React.FC<Props> = ({
             background: `linear-gradient(180deg, ${bgColor} 25%, ${bgColorTwo})`,
             opacity: opacity,
             height: `${height}`,
-            width: `min(${width}, 100vw)`,
+            width: `min(${width}, 100vw-40px)`,
         } : {
             color: textColor,
             backgroundColor: bgColor,
             opacity: opacity,
             height: `${height}`,
-            width: `min(${width}, 100vw)`,
+            width: `min(${width}, 100vw-40px)`,
         }}
         >
             {children}
