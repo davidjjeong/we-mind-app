@@ -29,7 +29,7 @@ const Widget: React.FC<Props> = ({
         <div className={`${className} ${styles.widgetContainer}`}
             style={gradient ? {
             color: textColor,
-            background: `linear-gradient(180deg, ${bgColor}, ${bgColorTwo})`,
+            background: `linear-gradient(180deg, ${bgColor} 25%, ${bgColorTwo})`,
             opacity: opacity,
             height: `${height}`,
             width: `min(${width}, 100vw)`,

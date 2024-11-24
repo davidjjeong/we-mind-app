@@ -27,7 +27,7 @@ export default function Dashboard() {
                         <Widget textColor="#000" bgColor="#FFF" width="450px"
                             children={<MoodEvaluator />}
                         />
-                        <Widget textColor="#FFFFFFCC" bgColor="#BF94E4" bgColorTwo="#FFFFFF" gradient={true}
+                        <Widget textColor="#333333" bgColor="#FFB5C0" bgColorTwo="#BF94E4" gradient={true}
                             height="100px" width="150px" children={<Streak />}
                         />
                     </div>
