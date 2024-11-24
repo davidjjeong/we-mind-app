@@ -9,7 +9,7 @@ const colors = ['#BF94E4', '#C698E0', '#CD9BDC', '#D49FD8', '#DBA3D4',
 
 export const MoodChart = () => {
     return(
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-y-[10px]">
             <h1 className="text-[36px]">Weekly Mood</h1>
             <ResponsiveContainer height={300} width="100%">
                 <BarChart data={data} margin={{ top: 0, left: 0, right: 0, bottom: 0 }}>
