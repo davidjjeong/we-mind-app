@@ -1,40 +1,46 @@
 import React from "react";
 import styles from "./widget.module.css";
+import { minPointSizeCallback } from "recharts/types/util/BarUtils";
 
 interface Props {
-    width?: Number;
+    width?: string;
+    height?: string;
     className?: string;
     bgColor?: string;
+    bgColorTwo?: string;
+    gradient?: boolean;
     opacity?: string;
     textColor?: string;
-    heading?: string;
-    headingSize?: string;
-    subHeading?: string;
     children?: React.ReactNode;
 }
 
 const Widget: React.FC<Props> = ({
     width,
+    height,
     className,
     bgColor,
+    bgColorTwo,
+    gradient,
     opacity,
     textColor,
-    heading,
-    headingSize,
-    subHeading,
     children
 }) => {
     return(
-        <div className={`${className} ${styles.widgetContainer} w-[min(${width}px,100vw)]`} style={{
+        <div className={`${className} ${styles.widgetContainer}`}
+            style={gradient ? {
+            color: textColor,
+            background: `linear-gradient(180deg, ${bgColor}, ${bgColorTwo})`,
+            opacity: opacity,
+            height: `${height}`,
+            width: `min(${width}, 100vw)`,
+        } : {
             color: textColor,
             backgroundColor: bgColor,
             opacity: opacity,
+            height: `${height}`,
+            width: `min(${width}, 100vw)`,
         }}
         >
-            <h2 style={{
-                fontSize: headingSize,
-            }} className="font-bold">{heading}</h2>
-            <h3>{subHeading}</h3>
             {children}
         </div>
     );

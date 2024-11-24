@@ -6,6 +6,7 @@ import Widget from "@/components/Widgets/Widget";
 import { MoodChart } from "@/components/Charts/MoodChart";
 import styles from "./dashboard.module.css";
 import MoodEvaluator from "@/components/ChatUI/MoodEvaluator";
+import Streak from '../../components/Widgets/Streak/Streak';
 
 export default function Dashboard() {
     const { data:session, status } = useSession();
@@ -22,11 +23,12 @@ export default function Dashboard() {
                 <div className={styles.dashboardMain}>
                     <h1 className="text-[56px] mb-5">Hello, {user_first_name}! 👋</h1>
                     <div className={styles.mainWidgets}>
-                        <Widget textColor="#000" bgColor="#FFF" width={450}
-                            heading="Weekly Mood" headingSize="36px" children={<MoodChart />} 
-                        />
-                        <Widget textColor="#000" bgColor="#FFF" width={450}
+                        <Widget textColor="#000" bgColor="#FFF" width="450px" children={<MoodChart />} />
+                        <Widget textColor="#000" bgColor="#FFF" width="450px"
                             children={<MoodEvaluator />}
+                        />
+                        <Widget textColor="#FFFFFFCC" bgColor="#BF94E4" bgColorTwo="#FFFFFF" gradient={true}
+                            height="100px" width="150px" children={<Streak />}
                         />
                     </div>
                     {messages.map((message) =>

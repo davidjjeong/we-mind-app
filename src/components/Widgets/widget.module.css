@@ -1,7 +1,7 @@
 .widgetContainer {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    justify-content: center;
     padding: 20px;
     border-radius: 50px;
     border-width: 3px;
